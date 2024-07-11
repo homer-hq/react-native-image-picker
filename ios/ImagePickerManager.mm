@@ -177,6 +177,8 @@ NSData* extractImageData(UIImage* image){
             data = UIImageJPEGRepresentation(newImage, quality);
         } else if ([fileType isEqualToString:@"png"]) {
             data = UIImagePNGRepresentation(newImage);
+        } else {
+            data = UIImageJPEGRepresentation(newImage, quality);
         }
     }
 
